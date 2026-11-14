@@ -1,6 +1,6 @@
 /* RADIO REWARDS service worker — works on any GitHub Pages path (all URLs are relative to the SW scope). */
-const VERSION = 'rr-v6';
-const CORE = ['./', 'index.html', 'cashier.html', 'admin.html', 'rr.css', 'rr-config.js', 'rr-core.js', 'rr-qr.js', 'rr-customer.js', 'rr-cashier.js', 'rr-admin.js',
+const VERSION = 'rr-v7';
+const CORE = ['./', 'index.html', 'cashier.html', 'admin.html', 'rr.css', 'rr-config.js', 'rr-core.js', 'rr-qr.js', 'rr-intro.js', 'rr-customer.js', 'rr-cashier.js', 'rr-admin.js',
   'manifest.webmanifest', 'icons/icon-192.png', 'icons/icon-512.png', 'icons/maskable-512.png', 'icons/logo.png'];
 const CDN_OK = ['fonts.googleapis.com', 'fonts.gstatic.com', 'cdn.jsdelivr.net', 'cdnjs.cloudflare.com', 'unpkg.com'];
 

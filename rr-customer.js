@@ -30,7 +30,7 @@
     'prof.nearby.limit': 'Works while this page is open. Alerts in the background need a native app or a Wallet card — web browsers can’t do that reliably.',
     'nb.on': 'Watching your location while the app is open.', 'nb.off': 'Nearby alert is off.', 'nb.denied': 'Location access was denied.', 'nb.unsupported': 'This browser doesn’t support location.',
     'nb.insecure': 'Location needs a secure (HTTPS) page.', 'nb.nocafe': 'The café location isn’t set yet.', 'nb.disabled': 'Nearby alerts are turned off by the café.',
-    'nearby.title': 'RADIO CAFÉ', 'nearby.msg': 'What are you waiting for? Your card is waiting for you.',
+    'nearby.title': 'RADIO CAFÉ', 'nearby.msg': 'What are you waiting for? Your card is waiting for you.', 'prof.made': 'Made with ☕ by Saif Sherief',
   }, {
     'title.customer': 'كارتي', 'lang.aria': 'اللغة', 'cup.aria': 'كوب راديو بيوضّح تقدمك في المكافآت',
     'nav.home': 'الرئيسية', 'nav.rewards': 'المكافآت', 'nav.card': 'الكارت', 'nav.activity': 'النشاط', 'nav.profile': 'حسابي',
@@ -58,7 +58,7 @@
     'prof.nearby.limit': 'بيشتغل والصفحة مفتوحة. التنبيه في الخلفية محتاج تطبيق أصلي أو كارت في المحفظة — متصفحات الويب مش بتعمل كده بشكل موثوق.',
     'nb.on': 'بتابع موقعك طول ما التطبيق مفتوح.', 'nb.off': 'تنبيه القرب متوقف.', 'nb.denied': 'تم رفض الوصول للموقع.', 'nb.unsupported': 'المتصفح ده مش بيدعم تحديد الموقع.',
     'nb.insecure': 'تحديد الموقع محتاج صفحة آمنة (HTTPS).', 'nb.nocafe': 'موقع الكافيه لسه مش متحدد.', 'nb.disabled': 'تنبيهات القرب متوقفة من الكافيه.',
-    'nearby.title': 'RADIO CAFÉ', 'nearby.msg': 'مستني إيه؟ كارتك مستنيك',
+    'nearby.title': 'RADIO CAFÉ', 'nearby.msg': 'مستني إيه؟ كارتك مستنيك', 'prof.made': 'صُنع بـ ☕ بواسطة Saif Sherief',
   });
 
   const NAV = [['home', 'M4 11l8-7 8 7v9h-5v-6H9v6H4z'], ['rewards', 'M4 9h16v4H4zM6 13v7h12v-7M12 9v11M12 9c-3 0-4-4-1-4 2 0 1 4 1 4zm0 0c3 0 4-4 1-4-2 0-1 4-1 4z'],
