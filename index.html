@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: blob:; media-src 'self' blob:; connect-src 'self' https://krcuvvnuzavkdrmgklah.supabase.co; worker-src 'self'; manifest-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'">
+<meta name="theme-color" content="#17151F">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="RADIO REWARDS">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>RADIO REWARDS</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Manrope:wght@400;600;700&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="rr.css">
+</head>
+<body data-v="customer" data-title="title.customer" class="locked">
+<header class="top">
+  <a class="brand" href="#home"><img src="icons/logo.png" alt="" width="38" height="38">RADIO REWARDS</a>
+  <button class="chip" id="lg" type="button" data-i18n-aria="lang.aria"></button>
+</header>
+<main>
+<section id="home">
+  <div><p class="mut" id="greet"></p><h2 id="headline">&nbsp;</h2></div>
+  <div class="stage" id="stage">
+    <div class="cupwrap">
+      <svg viewBox="0 0 240 290" role="img" data-i18n-aria="cup.aria">
+        <defs>
+          <linearGradient id="cf" x1="0" x2="1"><stop offset="0" stop-color="#2a1a12"/><stop offset=".5" stop-color="#6b4527"/><stop offset="1" stop-color="#2a1a12"/></linearGradient>
+          <linearGradient id="gs" x1="0" x2="1"><stop offset="0" stop-color="#F1E6D5" stop-opacity=".28"/><stop offset=".3" stop-color="#F1E6D5" stop-opacity=".05"/><stop offset="1" stop-color="#F1E6D5" stop-opacity=".16"/></linearGradient>
+          <linearGradient id="gd" x1="0" x2="1"><stop offset="0" stop-color="#8a6a36"/><stop offset=".5" stop-color="#E8CC94"/><stop offset="1" stop-color="#8a6a36"/></linearGradient>
+          <clipPath id="cp"><path d="M54 72H186L174 222Q172 240 154 240H86Q68 240 66 222Z"/></clipPath>
+        </defs>
+        <circle class="ring" cx="120" cy="150" r="100"/><circle class="ring" cx="120" cy="150" r="100"/><circle class="ring" cx="120" cy="150" r="100"/>
+        <path class="st" d="M96 52q-10-12 0-24t0-22"/><path class="st" d="M122 52q-10-12 0-24t0-22"/><path class="st" d="M148 52q-10-12 0-24t0-22"/>
+        <ellipse cx="120" cy="256" rx="104" ry="20" fill="url(#gd)" opacity=".9"/><ellipse cx="120" cy="252" rx="82" ry="12" fill="#17151F" opacity=".55"/>
+        <path d="M184 100q46 4 38 44-6 32-42 38" fill="none" stroke="url(#gd)" stroke-width="11" stroke-linecap="round"/>
+        <g clip-path="url(#cp)"><rect width="240" height="290" fill="#0d0b12" opacity=".5"/>
+          <g id="liq" style="transform:translateY(250px)">
+            <g class="w2" opacity=".6"><path d="M-120 10q15-10 30 0t30 0 30 0 30 0 30 0 30 0 30 0 30 0 30 0 30 0 30 0 30 0V300H-120z" fill="#8a5a33"/></g>
+            <g class="w1"><path d="M-120 10q15 10 30 0t30 0 30 0 30 0 30 0 30 0 30 0 30 0 30 0 30 0 30 0 30 0V300H-120z" fill="url(#cf)"/></g>
+          </g>
+        </g>
+        <path d="M54 72H186L174 222Q172 240 154 240H86Q68 240 66 222Z" fill="url(#gs)" stroke="#F1E6D5" stroke-opacity=".5" stroke-width="2"/>
+        <path d="M70 90L78 220" stroke="#fff" stroke-opacity=".35" stroke-width="5" stroke-linecap="round"/>
+        <ellipse cx="120" cy="72" rx="66" ry="9" fill="none" stroke="url(#gd)" stroke-width="5"/>
+      </svg>
+      <img class="cl" src="icons/logo.png" alt="">
+      <div class="burst"><i style="--k:0"></i><i style="--k:1"></i><i style="--k:2"></i><i style="--k:3"></i><i style="--k:4"></i><i style="--k:5"></i><i style="--k:6"></i><i style="--k:7"></i><i style="--k:8"></i></div>
+    </div>
+    <div class="badge" id="badge"></div>
+  </div>
+  <div class="gl">
+    <div class="stats"><div><b id="cnt">0</b><span class="mut" data-i18n="home.collected"></span></div><div><b id="rem">0</b><span class="mut" data-i18n="home.remaining"></span></div></div>
+    <div class="bar"><b id="pb" style="--p:0%"></b></div>
+  </div>
+  <div class="row gl"><div><h3 data-i18n="home.next"></h3><p class="mut" id="nextTxt"></p></div><a class="btn" href="#card" data-i18n="home.showqr"></a></div>
+  <div class="gl"><h3 style="margin-bottom:6px" data-i18n="home.recent"></h3><div id="recent"></div></div>
+</section>
+
+<section id="card" hidden>
+  <h2 data-i18n="card.title"></h2>
+  <div class="mcard">
+    <div class="row"><img src="icons/logo.png" alt="" width="64" height="64"><span class="go" style="font-weight:700" data-i18n="card.member"></span></div>
+    <div class="row" style="align-items:flex-end"><div><p class="mut" data-i18n="card.holder"></p><h3 style="font-size:22px" id="cName"></h3><p class="go" style="letter-spacing:2px;margin-top:4px" id="cNo" dir="ltr"></p></div><div class="qr" id="qrSmall" role="img" data-i18n-aria="card.qr.aria"></div></div>
+  </div>
+  <div class="gl" style="text-align:center">
+    <div class="qrbox" id="qrBig" role="img" data-i18n-aria="card.qr.aria"></div>
+    <p id="qrStatus" class="mut" style="margin-top:12px" aria-live="polite"></p>
+    <button class="chip" id="qrRefresh" type="button" style="margin-top:8px" data-i18n="card.refresh"></button>
+    <p class="mut" style="margin-top:12px;font-size:13px" data-i18n="card.hint"></p>
+  </div>
+</section>
+
+<section id="rewards" hidden>
+  <h2 data-i18n="rw.title"></h2>
+  <div id="rwReady"></div>
+  <h3 data-i18n="rw.progress"></h3>
+  <div id="rwProgress"></div>
+  <h3 data-i18n="rw.history"></h3>
+  <div class="gl" id="rwHistory"></div>
+</section>
+
+<section id="activity" hidden>
+  <h2 data-i18n="act.title"></h2>
+  <div class="tl" id="timeline"></div>
+</section>
+
+<section id="profile" hidden>
+  <h2 data-i18n="prof.title"></h2>
+  <div class="gl" id="profInfo"></div>
+  <div class="gl"><div class="row"><div><h3 data-i18n="prof.push"></h3><p class="mut" data-i18n="prof.push.d"></p></div><button class="sw off" id="pn" type="button" role="switch" aria-checked="false" data-i18n-aria="prof.push"></button></div><p class="mut" id="ps" style="margin-top:8px"></p><button class="btn w" id="ib" type="button" style="margin-top:12px" hidden data-i18n="prof.install"></button><p class="mut" id="iosHint" style="margin-top:10px" hidden data-i18n="prof.ios"></p></div>
+  <div class="gl"><div class="row"><div><h3 data-i18n="prof.nearby"></h3><p class="mut" data-i18n="prof.nearby.d"></p></div><button class="sw off" id="nb" type="button" role="switch" aria-checked="false" data-i18n-aria="prof.nearby"></button></div><p class="mut" id="ns" style="margin-top:8px"></p><button class="btn o w" id="nd" type="button" style="margin-top:12px" data-i18n="prof.preview"></button><p class="mut" style="margin-top:10px" data-i18n="prof.nearby.limit"></p></div>
+  <div class="gl"><div class="li"><span data-i18n="prof.lang"></span><button class="chip" id="langRow" type="button" style="margin-inline-start:auto"></button></div></div>
+  <button class="btn o w" id="signout" type="button" data-act="signout" data-i18n="signout"></button>
+</section>
+</main>
+<a class="ntf" id="nt" href="#card" aria-live="polite"><img src="icons/icon-192.png" alt=""><div><b id="nh"></b><p class="mut" id="nm"></p></div></a>
+<nav class="bn" id="bn" aria-label="App"></nav>
+<script src="rr-config.js"></script>
+<script src="rr-core.js"></script>
+<script src="rr-qr.js"></script>
+<script src="rr-customer.js"></script>
+</body>
+</html>

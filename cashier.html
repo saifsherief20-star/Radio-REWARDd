@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: blob:; media-src 'self' blob:; connect-src 'self' https://krcuvvnuzavkdrmgklah.supabase.co; worker-src 'self'; manifest-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'">
+<meta name="theme-color" content="#17151F">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="RADIO REWARDS">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>RADIO REWARDS · Cashier</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Manrope:wght@400;600;700&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="rr.css">
+</head>
+<body data-v="cashier" data-title="title.cashier" class="locked">
+<header class="top">
+  <a class="brand" href="cashier.html"><img src="icons/logo.png" alt="" width="38" height="38"><span>RADIO REWARDS</span></a>
+  <div class="right"><span class="tag" id="who"></span><a class="chip" id="adminLink" href="admin.html" hidden data-i18n="nav.admin"></a><button class="chip" id="lg" type="button" data-i18n-aria="lang.aria"></button><button class="chip" type="button" data-act="signout" data-i18n="signout"></button></div>
+</header>
+<main style="max-width:1100px">
+<h1 class="sr-only" data-i18n="title.cashier"></h1>
+<div class="two-col">
+  <div class="stack">
+    <section class="gl" id="scanSec" aria-labelledby="scanH">
+      <h2 id="scanH" data-i18n="scan.title"></h2>
+      <div class="vf mt" id="vf"><div id="rr-reader"></div><video id="rr-video" playsinline muted hidden></video><i></i><div class="hint" id="vfHint" data-i18n="scan.idle"></div></div>
+      <div class="row wrap mt"><button class="btn" id="startBtn" type="button" data-i18n="scan.start"></button><button class="btn o" id="stopBtn" type="button" hidden data-i18n="scan.stop"></button></div>
+      <p class="err-text" id="scanMsg" role="status" aria-live="polite"></p>
+      <h3 style="margin-top:14px" data-i18n="find.title"></h3>
+      <form class="tools mt" id="findForm" novalidate><input id="q" type="search" inputmode="search" autocomplete="off" data-i18n-ph="find.ph" data-i18n-aria="find.title"><button class="btn" type="submit" data-i18n="find.btn"></button></form>
+      <div class="res mt" id="results" aria-live="polite"></div>
+    </section>
+  </div>
+  <div class="stack">
+    <section class="gl" id="custSec" hidden aria-labelledby="custH">
+      <div class="row wrap"><div><p class="mut" data-i18n="cust.selected"></p><h2 id="custH"></h2><p class="go" dir="ltr" id="custMeta"></p></div><span class="pill" id="srcPill"></span></div>
+      <div class="kp mt"><div class="gl"><b class="sm" id="kPts">0</b><span class="mut" data-i18n="cust.points"></span></div><div class="gl"><b class="sm" id="kRw">0</b><span class="mut" data-i18n="cust.rewards"></span></div></div>
+      <div class="bar"><b id="kBar" style="--p:0%"></b></div>
+      <p class="mut" id="holdMsg" style="margin-top:8px"></p>
+      <div id="buySec">
+        <h3 class="mt" data-i18n="buy.title"></h3>
+        <div class="row wrap" id="drinkChips" role="radiogroup" data-i18n-aria="buy.drink" style="justify-content:flex-start"></div>
+        <div class="qtyrow"><span data-i18n="buy.qty"></span><div class="row"><button class="chip" id="qMinus" type="button" data-i18n-aria="buy.less">−</button><b id="qVal" aria-live="polite">1</b><button class="chip" id="qPlus" type="button" data-i18n-aria="buy.more">+</button></div></div>
+        <button class="btn w mt" id="regBtn" type="button" data-i18n="buy.btn"></button>
+      </div>
+      <p class="mut mt" id="manualOff" hidden data-i18n="buy.manualOff"></p>
+      <div id="claimSec" hidden>
+        <h3 class="mt" data-i18n="claim.title"></h3>
+        <div class="row wrap" id="rewardChips" style="justify-content:flex-start"></div>
+        <button class="btn w mt" id="claimBtn" type="button" data-i18n="claim.btn"></button>
+      </div>
+      <button class="btn o w mt" id="doneBtn" type="button" data-i18n="cust.done"></button>
+    </section>
+    <section class="gl" id="resultSec" hidden aria-live="polite"></section>
+    <section class="gl" aria-labelledby="histH">
+      <div class="row"><h2 id="histH" data-i18n="hist.title"></h2><button class="chip" id="histRefresh" type="button" data-i18n="hist.refresh"></button></div>
+      <div id="history"><p class="empty" data-i18n="loading"></p></div>
+    </section>
+  </div>
+</div>
+</main>
+<script src="rr-config.js"></script>
+<script src="rr-core.js"></script>
+<script src="rr-cashier.js"></script>
+</body>
+</html>

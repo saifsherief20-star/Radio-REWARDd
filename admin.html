@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: blob:; media-src 'self' blob:; connect-src 'self' https://krcuvvnuzavkdrmgklah.supabase.co; worker-src 'self'; manifest-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'">
+<meta name="theme-color" content="#17151F">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="RADIO REWARDS">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>RADIO REWARDS · Admin</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Manrope:wght@400;600;700&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="rr.css">
+</head>
+<body data-v="admin" data-title="title.admin" class="locked">
+<header class="top">
+  <a class="brand" href="admin.html"><img src="icons/logo.png" alt="" width="38" height="38"><span>RADIO REWARDS</span></a>
+  <div class="right"><span class="tag" id="who"></span><a class="chip" href="cashier.html" data-i18n="nav.cashier"></a><button class="chip" id="lg" type="button" data-i18n-aria="lang.aria"></button><button class="chip" type="button" data-act="signout" data-i18n="signout"></button></div>
+</header>
+<main style="max-width:1100px">
+<h1 class="sr-only" data-i18n="title.admin"></h1>
+<nav class="vtabs" id="tabs" aria-label="Admin"></nav>
+<div id="view" aria-live="polite"></div>
+</main>
+<div id="modal" hidden></div>
+<script src="rr-config.js"></script>
+<script src="rr-core.js"></script>
+<script src="rr-admin.js"></script>
+</body>
+</html>
